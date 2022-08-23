@@ -24,19 +24,6 @@ class EmployeesAddForm extends Component {
 		console.log(this.state);
 	};
 
-
-
-	// onNameValueChange = (e) => {
-	// 	this.setState({
-	// 		name: e.target.value,
-	// 	});
-	// };
-	// onSalaryValueChange = (e) => {
-	// 	this.setState({
-	// 		salary: e.target.value,
-	// 	});
-	// };
-
 	render() {
 		const { name, salary } = this.state;
 
@@ -69,7 +56,5 @@ class EmployeesAddForm extends Component {
 		);
 	}
 }
-
-
 
 export default EmployeesAddForm;

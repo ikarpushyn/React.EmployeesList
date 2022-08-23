@@ -1,14 +1,7 @@
 import './employees-list-item.css';
 
 const EmployeesListItem = (props) => {
-	const {
-		name,
-		salary,
-		onDelete,
-		/* onToggleIncrease, onToggleRise */ onToggleProp,
-		increase,
-		rise,
-	} = props;
+	const { name, salary, onDelete, onToggleProp, increase, rise } = props;
 
 	let className = 'list-group-item d-flex justify-content-between';
 	if (increase) {
@@ -21,17 +14,7 @@ const EmployeesListItem = (props) => {
 
 	return (
 		<li className={className}>
-			<span
-				className="list-group-item-label"
-				onClick={onToggleProp}
-				data-toggle="rise"
-				// style={{
-				// 	fontSize: '40px',
-				// 	color: 'red',
-				// 	transition: 'all',
-				// 	WebkitTransition: 'all',
-				// }}
-			>
+			<span className="list-group-item-label" onClick={onToggleProp} data-toggle="rise">
 				{name}
 			</span>
 

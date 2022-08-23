@@ -24,20 +24,6 @@ class App extends Component {
 		this.maxId = 4;
 	}
 
-	// deleteItem = (id) => {
-	// 	this.setState(({ data }) => {
-	// 		const index = data.findIndex((elem) => elem.id === id);
-
-	// 		const before = data.slice(0, index);
-	// 		const after = data.slice(index + 1);
-
-	// 		const newArr = [...before, ...after];
-	// 		return {
-	// 			data: newArr,
-	// 		};
-	// 	});
-	// };
-
 	deleteItem = (id) => {
 		this.setState(({ data }) => {
 			return {
@@ -56,33 +42,6 @@ class App extends Component {
 		});
 	};
 
-	// onToggleIncrease = (id) => {
-	// 	console.log(`Increase this ${id}`);
-	// 	this.setState(({ data }) => ({
-	// 		data: data.map((item) => {
-	// 			if (item.id === id) {
-	// 				return { ...item, increase: !item.increase };
-	// 			}
-	// 			return item;
-	// 		}),
-	// 	}));
-	// };
-
-	// onToggleIncrease = (id) => {
-	// 	console.log(`Increase this ${id}`);
-	// 	this.setState(({ data }) => {
-	// 		const index = data.findIndex((elem) => elem.id === id);
-
-	// 		const old = data[index];
-	// 		const newItem = { ...old, increase: !old.increase };
-	// 		const newArr = [...data.slice(0, index), newItem, ...data.slice(index + 1)];
-
-	// 		return {
-	// 			data: newArr,
-	// 		};
-	// 	});
-	// };
-
 	onToggleProp = (id, prop) => {
 		console.log(`Rise this ${id}`);
 		this.setState(({ data }) => ({
@@ -94,17 +53,6 @@ class App extends Component {
 			}),
 		}));
 	};
-	// onToggleRise = (id) => {
-	// 	console.log(`Rise this ${id}`);
-	// 	this.setState(({ data }) => ({
-	// 		data: data.map((item) => {
-	// 			if (item.id === id) {
-	// 				return { ...item, rise: !item.rise };
-	// 			}
-	// 			return item;
-	// 		}),
-	// 	}));
-	// };
 
 	searchEmp = (items, term) => {
 		if (term.length === 0) {
@@ -155,8 +103,6 @@ class App extends Component {
 				<EmployeesList
 					data={visibleData}
 					onDelete={this.deleteItem}
-					// onToggleIncrease={this.onToggleIncrease}
-					// onToggleRise={this.onToggleRise}
 					onToggleProp={this.onToggleProp}
 				/>
 				<EmployeesAddForm onAdd={this.addItem} />
